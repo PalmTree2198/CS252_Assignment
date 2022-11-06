@@ -22,5 +22,15 @@ The header file `unistd.h` used provides access to the POSIX operating system AP
  
  ## Problem 3.19, Time taken by command
  
+ I was able get a partially correct solution for the problem, could not solve the problem using the IPC methods.
  
+ ## Problem 3.21, Collatz Conjecture
+ 
+ `main(int argc, char *argv[])` was defined with two arguments so that command-line arguments could be passed. 
+ 
+ The number that will be passed as an argument from the command line will be stored in the form of character string in the array. So the character string is converted 
+ into an integer using the function `atoi`.
+ The child process will run the Collatz algorithm on a number that is passed as an argument.
+ 
+ `wait()` system call is invoked to make the parent process wait till the child process has completed and then terminate.
 
