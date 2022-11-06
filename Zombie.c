@@ -6,7 +6,7 @@ int main (void) {
 	pid = fork(); // To create a new process
 
 	if (pid < 0) { // Check if the child process has been created
-		fprintf(stdout, "Fork failed\n"); // Unable to create a child process
+		perror("Fork failed\n"); // Unable to create a child process
 		return 1;
 	}
 	else if (pid == 0) { // Successfully created a child process
