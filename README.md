@@ -2,7 +2,11 @@
 Ankush Singh
 201EC268
 
+This repository contains the codes for the assignment of CS252 Operating Systems course. The problems are taken from 10th edition of Operating Systems Concepts by Abraham Silberschatz.
+The file Zombie.c contains the C code for problem number 3.18, and the file time.c contains the C code for problem number 3.19.
+
 ## Problem 3.18, Zombie Process
-The problem wants us to create a child process using the command fork() and make it a zombie process. We can achieve
-this by killing the parent process of the child process. 
-Zombie process - It is process when no parent process is waiting for it (no wait() command was invoked).
+
+The problem wants us to fork a child process which ultimately becomes a zombie process. 
+We can achieve this by using the `fork()` system call which creates a child process
+
