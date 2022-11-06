@@ -13,7 +13,7 @@ int main (void) {
 		printf("The process created is the child process.\n");
 	}
 	else if (pid > 0) { 
-		sleep(10); // Puts the parent process to sleep for 10 seconds.
+		sleep(10); // Puts the parent process to sleep for 10 seconds
 	}
 	return 0;	
 }
