@@ -27,7 +27,7 @@ int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array
 	}
 	if (pid > 0) { // Process is parent
 		wait(NULL); // Parent process waits until child has been completed
-		printf("Child process completed with status %d; algorithm terminated\n", status);
+		printf("Child process completed with status 0; algorithm terminated\n");
 	}
 	else { // Child process
 		while (n != 1) { // Collatz algorithm
