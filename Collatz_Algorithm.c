@@ -14,7 +14,7 @@ int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array
 		return 1;
 	}
 
-	z = atoi(argv[1]);
+	z = atoi(argv[1]); // Converting character string to integer value
 
 	if (z < 1) {
 		perror("First argument must be a positive integer\n");
@@ -23,7 +23,7 @@ int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array
 
 	pid = fork(); // Creating a process
 
-	if (pid < 0) {
+	if (pid < 0) { // Creation of child process unsuccessful
 		perror("Fork failed\n");
 		return 1;
 	}
