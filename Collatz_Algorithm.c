@@ -4,9 +4,9 @@
 #include <sys/wait.h>
 
 int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array of character pointers listing all the arguments
-	int z;
+	int n; // Input integer 
 	pid_t pid;
-	int status;
+	int status; // Stores the state of the child process
 
 	
 	if (argc != 2) { // Terminate the process if true, error checking
@@ -16,7 +16,7 @@ int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array
 
 	z = atoi(argv[1]); // Converting character string to integer value
 
-	if (z < 1) {
+	if (n < 1) {
 		perror("First argument must be a positive integer\n");
 		return 1;
 	}
@@ -32,16 +32,16 @@ int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array
 		printf("Child process completed with status %d; algorithm terminated\n", status);
 	}
 	else { // Child process
-		while (z != 1) { // Collatz algorithm
-			printf("%d, ", z);
-			if (z % 2 == 0) {
-				z /= 2;
+		while (n != 1) { // Collatz algorithm
+			printf("%d, ", n);
+			if (n % 2 == 0) { // n is even 
+				n /= 2;
 			}
- 			else {
-				z = z * 3 + 1;
+ 			else { // n is odd
+				n = n * 3 + 1; 
 			}
 		}
-		printf("%d.\n", z);
+		printf("%d.\n", n);
 	}
     	return 0;
 }
