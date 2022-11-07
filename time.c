@@ -17,7 +17,7 @@ int main(int argc, char *argv[]) { // argc -> count of arguments, argv -> values
         exit(123); // Any invocation exited with non-zero status, it indicates an error
     } // Don't execute if the process is parent process
 
-    int status; // Shows the status child process
+    int status; // Shows the state child process
     struct rusage *ru; // struct to give information about resource usage of a process
     gettimeofday(&init_time, NULL); // Get initial timestamp
     wait4(pid, &status, 0, ru); // Wait until child has run the process, this suspends the execution of the current process until the child process has changed its state
