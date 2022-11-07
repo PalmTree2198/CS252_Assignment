@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <sys/wait.h>
 
 int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array of character pointers listing all the arguments
 	int n; // Input integer 
