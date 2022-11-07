@@ -13,7 +13,7 @@ We can achieve this by using the `fork()` system call which creates a child proc
 
 `ps -l` command is used to display the list of processes currently running along with their states.
 
-`&` is used to run a program in the backgeround.
+`&` is used to run a program in the background.
 
 `kill` command can be used to terminate a process manually.
 
