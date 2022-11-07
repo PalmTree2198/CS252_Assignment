@@ -6,8 +6,6 @@
 int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array of character pointers listing all the arguments
 	int n; // Input integer 
 	pid_t pid;
-	int status; // Stores the state of the child process
-
 	
 	if (argc != 2) { // Terminate the process if true, error checking
 		perror("Usage: ./collatz <positive_integer>\n");
@@ -28,7 +26,7 @@ int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array
 		return 1;
 	}
 	if (pid > 0) { // Process is parent
-		wait(&status); // Parent process waits until status changes
+		wait(NULL); // Parent process waits until child has been completed
 		printf("Child process completed with status %d; algorithm terminated\n", status);
 	}
 	else { // Child process
