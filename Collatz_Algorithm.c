@@ -14,7 +14,7 @@ int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array
 		return 1;
 	}
 
-	z = atoi(argv[1]); // Converting character string to integer value
+	n = atoi(argv[1]); // Converting character string to integer value
 
 	if (n < 1) {
 		perror("First argument must be a positive integer\n");
