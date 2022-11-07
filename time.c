@@ -18,9 +18,8 @@ int main(int argc, char *argv[]) { // argc -> count of arguments, argv -> values
     } // Don't execute if the process is parent process
 
     int status; // Shows the state child process
-    struct rusage *ru; // struct to give information about resource usage of a process
     gettimeofday(&init_time, NULL); // Get initial timestamp
-    wait4(pid, &status, 0, ru); // Wait until child has run the process, this suspends the execution of the current process until the child process has changed its state
+    wait(NULL); // Wait until child has run the process, this suspends the execution of the current process until the child process has changed its state
     gettimeofday(&final_time, NULL); // Get final timestamp
     long long diff = final_time.tv_sec - init_time.tv_sec; // Gives the time difference in seconds
     long long udiff = final_time.tv_usec - init_time.tv_usec; // Gives the time difference in microseconds
