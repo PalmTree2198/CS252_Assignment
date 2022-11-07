@@ -8,8 +8,8 @@ int main (int argc, char *argv[]) { // argc -> count of arguments, argv -> array
 	pid_t pid;
 	int status;
 
-	/* error checking */
-	if (argc != 2) {
+	
+	if (argc != 2) { // Terminate the process if true, error checking
 		perror("Usage: ./collatz <positive_integer>\n");
 		return 1;
 	}
