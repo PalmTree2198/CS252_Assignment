@@ -1,7 +1,7 @@
 #include <stdio.h>  
 #include <stdlib.h>
 #include <unistd.h>  
-#include <sys/time.h> // Used to define timeval strcuture 
+#include <sys/time.h> // Used to define timeval structure 
 
 int main(int argc, char *argv[]) { // argc -> count of arguments, argv -> values of arguments
     struct timeval init_time, final_time; // Data structure for time (timeval)
