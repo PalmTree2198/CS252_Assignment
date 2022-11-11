@@ -4,7 +4,7 @@ Ankush Singh,
 
 This repository contains the codes for the assignment of CS252 Operating Systems course. The problems are taken from 10th edition of Operating Systems Concepts by Abraham Silberschatz.
 
-The file Zombie.c contains the C code for problem number 3.18, and the file time.c contains the C code for problem number 3.19.
+The file Zombie.c contains the C code for problem number 3.18, and the file Collatz_Algorithm.c contains the C code for problem number 3.21.
  
  
 
